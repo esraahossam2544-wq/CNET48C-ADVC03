@@ -80,27 +80,35 @@
 //Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
 //Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
 #endregion
-#region Ex04
-//HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+#region Ex4
+//        HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
 //emails.Add("ahmed@test.com");
-//emails.Add("AHMED@test.com");   
+//emails.Add("AHMED@test.com");
 //emails.Add("sara@test.com");
-//emails.Add("Sara@Test.com");  
+//emails.Add("Sara@Test.Com");
+
 //Console.WriteLine("Count: " + emails.Count);
+//Console.WriteLine();
 
-//bool exists = emails.Contains("AHMED@TEST.COM");
-//Console.WriteLine("AHMED@TEST.COM exists: " + exists);
+//HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+//HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
 
-//bool wasAdded = emails.Add("ahmed@Test.Com");
-//Console.WriteLine("Adding ahmed@Test.Com succeeded: " + wasAdded);
+//HashSet<int> unionSet = new HashSet<int>(setA);
+//unionSet.UnionWith(setB);
+//Console.WriteLine("Union (A ∪ B): " + string.Join(", ", unionSet));
 
-//bool addedNew = emails.Add("mona@test.com");
-//Console.WriteLine("Adding mona@test.com succeeded: " + addedNew); 
+//HashSet<int> intersectSet = new HashSet<int>(setA);
+//intersectSet.IntersectWith(setB);
+//Console.WriteLine("Intersect (A ∩ B): " + string.Join(", ", intersectSet));
 
-//emails.Remove("sara@test.com");
+//HashSet<int> exceptSet = new HashSet<int>(setA);
+//exceptSet.ExceptWith(setB);
+//Console.WriteLine("Except (A - B): " + string.Join(", ", exceptSet));
 
-//Console.WriteLine("Remaining emails:");
-//foreach (var email in emails)
-//    Console.WriteLine(email);
+//Console.WriteLine();
+
+//HashSet<int> subsetCheck = new HashSet<int> { 1, 2 };
+//bool isSubset = subsetCheck.IsSubsetOf(setA);
+//Console.WriteLine("{1,2} is a subset of Set A: " + isSubset);
 #endregion
