@@ -22,3 +22,30 @@
 //foreach (var g in formattedGrades)
 //    Console.WriteLine(g);
 #endregion
+#region Ex02
+SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>
+        {
+            { 500, "Ahmed" },
+            { 200, "Sara" },
+            { 800, "Ali" },
+            { 350, "Mona" }
+        };
+
+Console.WriteLine("Leaderboard:");
+foreach (var entry in leaderboard)
+    Console.WriteLine($"{entry.Key} = {entry.Value}");
+
+var first = leaderboard.First(); 
+Console.WriteLine($"First Key: {first.Key}, First Value: {first.Value}");
+
+bool exists500 = leaderboard.ContainsKey(500);
+Console.WriteLine("Score 500 exists: " + exists500);
+if (leaderboard.TryGetValue(999, out string player999))
+    Console.WriteLine("Score 999: " + player999);
+else
+    Console.WriteLine("No player with score 999");
+leaderboard.Remove(200);
+Console.WriteLine("After removing score 200:");
+foreach (var entry in leaderboard)
+    Console.WriteLine($"{entry.Key} = {entry.Value}");
+#endregion
