@@ -80,3 +80,27 @@
 //Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
 //Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
 #endregion
+#region Ex04
+//HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+//emails.Add("ahmed@test.com");
+//emails.Add("AHMED@test.com");   
+//emails.Add("sara@test.com");
+//emails.Add("Sara@Test.com");  
+//Console.WriteLine("Count: " + emails.Count);
+
+//bool exists = emails.Contains("AHMED@TEST.COM");
+//Console.WriteLine("AHMED@TEST.COM exists: " + exists);
+
+//bool wasAdded = emails.Add("ahmed@Test.Com");
+//Console.WriteLine("Adding ahmed@Test.Com succeeded: " + wasAdded);
+
+//bool addedNew = emails.Add("mona@test.com");
+//Console.WriteLine("Adding mona@test.com succeeded: " + addedNew); 
+
+//emails.Remove("sara@test.com");
+
+//Console.WriteLine("Remaining emails:");
+//foreach (var email in emails)
+//    Console.WriteLine(email);
+#endregion
