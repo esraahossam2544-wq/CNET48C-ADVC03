@@ -23,29 +23,60 @@
 //    Console.WriteLine(g);
 #endregion
 #region Ex02
-SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>
-        {
-            { 500, "Ahmed" },
-            { 200, "Sara" },
-            { 800, "Ali" },
-            { 350, "Mona" }
-        };
+//SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>
+//        {
+//            { 500, "Ahmed" },
+//            { 200, "Sara" },
+//            { 800, "Ali" },
+//            { 350, "Mona" }
+//        };
 
-Console.WriteLine("Leaderboard:");
-foreach (var entry in leaderboard)
-    Console.WriteLine($"{entry.Key} = {entry.Value}");
+//Console.WriteLine("Leaderboard:");
+//foreach (var entry in leaderboard)
+//    Console.WriteLine($"{entry.Key} = {entry.Value}");
 
-var first = leaderboard.First(); 
-Console.WriteLine($"First Key: {first.Key}, First Value: {first.Value}");
+//var first = leaderboard.First(); 
+//Console.WriteLine($"First Key: {first.Key}, First Value: {first.Value}");
 
-bool exists500 = leaderboard.ContainsKey(500);
-Console.WriteLine("Score 500 exists: " + exists500);
-if (leaderboard.TryGetValue(999, out string player999))
-    Console.WriteLine("Score 999: " + player999);
-else
-    Console.WriteLine("No player with score 999");
-leaderboard.Remove(200);
-Console.WriteLine("After removing score 200:");
-foreach (var entry in leaderboard)
-    Console.WriteLine($"{entry.Key} = {entry.Value}");
+//bool exists500 = leaderboard.ContainsKey(500);
+//Console.WriteLine("Score 500 exists: " + exists500);
+//if (leaderboard.TryGetValue(999, out string player999))
+//    Console.WriteLine("Score 999: " + player999);
+//else
+//    Console.WriteLine("No player with score 999");
+//leaderboard.Remove(200);
+//Console.WriteLine("After removing score 200:");
+//foreach (var entry in leaderboard)
+//    Console.WriteLine($"{entry.Key} = {entry.Value}");
+#endregion
+#region Ex03
+//Dictionary<string, string> phoneBook = new Dictionary<string, string>
+//        {
+//            { "Ahmed", "01001234567" },
+//            { "Sara", "01112345678" },
+//            { "Ali", "01223456789" },
+//            { "Mona", "01098765432" }
+//        };
+
+//phoneBook["Omar"] = "01234567890"; 
+
+//try
+//{
+//    phoneBook.Add("Ahmed", "01111111111");
+//}
+//catch (ArgumentException ex)
+//{
+//    Console.WriteLine("Error: " + ex.Message);
+//}
+
+//bool added = phoneBook.TryAdd("Sara", "01199999999");
+//Console.WriteLine("TryAdd Sara succeeded: " + added);
+
+//bool found = phoneBook.ContainsKey("Youssef");
+//Console.WriteLine("Youssef exists: " + found);
+
+//string number = phoneBook.TryGetValue("Youssef", out string val) ? val : "Not Found";
+//Console.WriteLine("Youssef's number: " + number);
+//Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+//Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
 #endregion
